@@ -30,6 +30,7 @@ namespace SharpWebSockets
                        	numberOfBytesRead = numberOfBytesRead + stream.Read(bytes,0,bytes.Length);
 						// Web client
 						if(FigureOutProtocol(bytes)=="websocket76"){
+							Console.WriteLine("Start communicating");
 							MakeWebSockets76Handshake(stream, bytes,numberOfBytesRead);	
 									while(true){
 									bytes = new byte[500];			

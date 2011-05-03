@@ -80,8 +80,8 @@ namespace SharpWebSockets
        "HTTP/1.1 101 WebSocket Protocol Handshake\r\n" +
        "Upgrade: WebSocket\r\n" +
        "Connection: Upgrade\r\n" +
-       "Sec-WebSocket-Origin: http://localhost:8888\r\n" +
-       "Sec-WebSocket-Location: ws://localhost:8181/websession\r\n" +
+       "Sec-WebSocket-Origin: http://chaga.alexkempton.net\r\n" +
+       "Sec-WebSocket-Location: ws://chaga.alexkempton.net:8181/websession\r\n" +
 	//	"Sec-WebSocket-Protocol: sample\r\n" +
        "\r\n";
 			

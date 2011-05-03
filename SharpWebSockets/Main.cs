@@ -25,7 +25,9 @@ namespace SharpWebSockets
 		internal Controller(){
 			ThreadPool.SetMinThreads (50, 50);
 			ThreadPool.SetMaxThreads(50,50);
-			TcpListener listener = new TcpListener(IPAddress.Loopback, 8181);
+			IPAddress addr = IPAddress.Parse("46.137.97.137");
+			TcpListener listener = new TcpListener(IPAddress.Any, 8181);
+			
             listener.Start();
 			
 			while (true)
