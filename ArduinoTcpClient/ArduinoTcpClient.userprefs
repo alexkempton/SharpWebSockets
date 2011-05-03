@@ -3,7 +3,10 @@
   <MonoDevelop.Ide.Workbench ActiveDocument="ArduinoTcpClient/Controller.cs">
     <Files>
       <File FileName="ArduinoTcpClient/Main.cs" Line="11" Column="3" />
-      <File FileName="ArduinoTcpClient/Controller.cs" Line="34" Column="6" />
+      <File FileName="ArduinoTcpClient/Controller.cs" Line="21" Column="18" />
+      <File FileName="ArduinoTcpClient/AssemblyInfo.cs" Line="1" Column="1" />
+      <File FileName="ArduinoTcpClient/Arduino.cs" Line="26" Column="15" />
+      <File FileName="../SharpWebSockets/Main.cs" Line="37" Column="9" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

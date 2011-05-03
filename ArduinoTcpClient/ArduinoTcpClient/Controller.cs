@@ -6,14 +6,30 @@ namespace ArduinoTcpClient
 {
 	public class Controller
 	{
+		public EventWaitHandle Eventhandler = new ManualResetEvent(false);
+		public object Locker = new object();
+		public string Message {get;set;}
 		public Controller ()
 		{
-			string ip = IPAddress.Loopback.ToString();
-			Connect(ip,"hello man");
+			// string ip = IPAddress.Loopback.ToString();
+			string ip = "46.137.97.137";
+			Connect(ip);
+			
+			/*
+			 *  Task.Factory.StartNew(() =>
+					{
+						Connect(ip);
+					});
+			  Task.Factory.StartNew(() =>
+					{
+						new Arduino(this);
+					});
+			
+			 */
 			
 		}
 			
-			public void Connect(String server, String message) 
+			public void Connect(String server) 
 				{
 				  try 
 				  {

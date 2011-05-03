@@ -11,6 +11,7 @@ namespace SharpWebSockets
 	{
 		public static void Main (string[] args)
 		{
+			Console.WriteLine("WebSockets server started");
 			new Controller();
 		}
 	}
@@ -20,7 +21,6 @@ namespace SharpWebSockets
 		public EventWaitHandle Eventhandler = new ManualResetEvent(false);
 		public object Locker = new object();
 		public string Message {get;set;}
-		//ManualResetEvent[] manualEvents = new ManualResetEvent[50];
 		
 		internal Controller(){
 			ThreadPool.SetMinThreads (50, 50);
@@ -29,30 +29,14 @@ namespace SharpWebSockets
             listener.Start();
 			
 			while (true)
-    {
+	    	{
 				TcpClient client = listener.AcceptTcpClient();
      			Task.Factory.StartNew(() =>
 					{
 						Server s = new Server(this,client);
 					});
-    }
-			
-			
-		
-			
-				
-		}
-			
-			
-
-			
-		
-		
-		
-		
+  	  		}		
+		}	
 	}
-	
-	
-	
 	
 }

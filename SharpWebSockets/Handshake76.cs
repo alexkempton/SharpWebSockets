@@ -38,8 +38,8 @@ namespace SharpWebSockets
 
     			    byte[] data = md5Hasher.ComputeHash(returnBytes);
 
-                    Console.WriteLine("Received");
-                    Console.WriteLine(clientHandshakeString);
+                    Console.WriteLine("Client handshake received");
+                 
                   
 					
                     

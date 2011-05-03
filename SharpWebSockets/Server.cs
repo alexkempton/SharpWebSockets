@@ -17,7 +17,6 @@ namespace SharpWebSockets
 			this.client = client;
 			
 			StartHandshake();
-	
 		}
 		
 		
@@ -29,7 +28,8 @@ namespace SharpWebSockets
 						byte[] bytes = new byte[500];
            			 	int numberOfBytesRead = 0;
                        	numberOfBytesRead = numberOfBytesRead + stream.Read(bytes,0,bytes.Length);
-						if(FigureOutProtocol(bytes)=="websocket72"){
+						// Web client
+						if(FigureOutProtocol(bytes)=="websocket76"){
 							MakeWebSockets76Handshake(stream, bytes,numberOfBytesRead);	
 									while(true){
 									bytes = new byte[500];			
@@ -45,20 +45,19 @@ namespace SharpWebSockets
 										
 										}
 					
-							Console.WriteLine("ended");
+							Console.WriteLine("Web client closed");
 						
 							}
 				
-						// Arduino
+						// Arduino client
 						else {
 								stream.Read(bytes,0,bytes.Length);
-								Console.WriteLine(System.Text.Encoding.UTF8.GetString(bytes));
+								Console.WriteLine("Arduino client connected");
 								int count = 1;
 								while(count>0){
 									bytes = new byte[500];			
 									try {
 										count = stream.Read(bytes,0,bytes.Length);
-									
 										}
 									
 									catch (IOException e) 
@@ -72,7 +71,7 @@ namespace SharpWebSockets
 											
 										}
 								
-								Console.WriteLine("arduino client ended");
+								Console.WriteLine("Arduino client closed");
 					
 							}
 				
@@ -87,7 +86,7 @@ namespace SharpWebSockets
 			string beginning = System.Text.Encoding.UTF8.GetString(bytes);
 			Regex websockets76 = new Regex("Sec-WebSocket-Key2");
 			if(websockets76.IsMatch(beginning)) {
-				return "websocket72";
+				return "websocket76";
 			}
 			
 			else return "client";

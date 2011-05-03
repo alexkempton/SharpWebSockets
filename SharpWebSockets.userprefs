@@ -1,10 +1,10 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|x86" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="SharpWebSockets/Server.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="SharpWebSockets/Main.cs">
     <Files>
-      <File FileName="SharpWebSockets/Main.cs" Line="21" Column="39" />
-      <File FileName="SharpWebSockets/Server.cs" Line="60" Column="19" />
-      <File FileName="SharpWebSockets/Handshake76.cs" Line="54" Column="32" />
+      <File FileName="SharpWebSockets/Main.cs" Line="14" Column="51" />
+      <File FileName="SharpWebSockets/Server.cs" Line="41" Column="12" />
+      <File FileName="SharpWebSockets/Handshake76.cs" Line="41" Column="28" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
